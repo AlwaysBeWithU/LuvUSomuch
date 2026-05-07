@@ -17,7 +17,7 @@ local lastPrestige = 0
 
 local function getPrestige()
     firesignal(interface.Topbar.Main.Categories.Equipment.Interact.MouseButton1Click)
-    task.wait(1.5)
+    task.wait(1)
     local ok, result = pcall(function()
         return prestigeLevel[interface.Equipment.Prestige.Progress.Title.Text] or 0
     end)
@@ -37,13 +37,13 @@ local function getSerumCount(name)
     return count
 end
 
-while task.wait(60) do
+while task.wait(20) do
     -- เช็ค Prestige
     local prestige = getPrestige()
 
     -- เช็ค Serum
     firesignal(interface.Topbar.Main.Categories.Inventory.Interact.MouseButton1Click)
-    task.wait(1.5)
+    task.wait(1)
 
     local gold    = currencies.Gold.Amount.Text
     local gem     = currencies.Gems.Amount.Text
