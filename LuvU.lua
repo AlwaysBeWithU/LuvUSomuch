@@ -362,7 +362,6 @@ task.spawn(function()
                 _G.Horst_SetDescription(msg)
 
                         if tonumber(cache.level) == 225 then
-                if _G.Horst_AccountChangeDone then
                     _G.Horst_AccountChangeDone()
                 end
             end
