@@ -24,6 +24,6 @@ while task.wait(5) do
     local gem  = currencies.Gems.Amount.Text
     local prestige = prestigeLevel[titleLabel.Text] or 0
 
-    local messages = "⚔️ Prestige : " .. prestige .. " , 💰 Gold : " .. gold .. " , 💎 Gems : " .. gem
+    local messages = "⚔️ Prestige : " .. prestige .. " | 💰 Gold : " .. gold .. " | 💎 Gems : " .. gem
     _G.Horst_SetDescription(messages)
 end
