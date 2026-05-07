@@ -360,6 +360,15 @@ task.spawn(function()
             if _G.Horst_SetDescription and msg ~= lastMsg then
                 lastMsg = msg
                 _G.Horst_SetDescription(msg)
+
+                        if tonumber(cache.level) == 225 then
+                if _G.Horst_AccountChangeDone then
+                    _G.Horst_AccountChangeDone()
+                end
+            end
+        end)
+    end
+end)
             end
         end)
     end
