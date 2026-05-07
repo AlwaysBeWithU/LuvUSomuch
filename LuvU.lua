@@ -61,4 +61,7 @@ while task.wait(20) do
 
     local messages = "⚔️ Prestige : " .. prestige .. " , 🏅 LV : " .. lv .. " , 💰 Gold : " .. gold .. " , 💎 Gems : " .. gem ..  serumText
     _G.Horst_SetDescription(messages)
+
+    if lv = 225 then 
+     _G.Horst_AccountChangeDone()
 end
