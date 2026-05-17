@@ -349,8 +349,8 @@ local function scanItems()
 
     if c then saveStats() end
     local fStr = cache.family ~= "None" and cache.family or cache.title
-    return string.format("🏆 Lv: %s 👑 P: %s  💰 Gold: %s 💎 Gems: %s  📜 Memory Scroll: %s 💉 Serum: %s ⚡ TS: %s",
-        cache.level, cache.prestige, cache.gold, cache.gems, cache.scroll or "0", cache.serum or "0", cache.ts or "0")
+    return string.format("🏆 Lv: %s 👑 P: %s  💰 Gold: %s 💎 Gems: %s  📜 Memory Scroll: %s 💉 Serum: %s 🛡️ Family: %s,
+        cache.level, cache.prestige, cache.gold, cache.gems, cache.scroll or "0", cache.serum or "0", fStr )
 end
 local lastMsg = ""
 task.spawn(function()
