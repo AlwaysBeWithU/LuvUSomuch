@@ -349,8 +349,8 @@ local function scanItems()
 
     if c then saveStats() end
     local fStr = cache.family ~= "None" and cache.family or cache.title
-    return string.format("🏆 Lv: %s 👑 P: %s  💰 Gold: %s 💎 Gems: %s  📜 Memory Scroll: %s 💉 Serum: %s 🛡️ Family: %s,
-        cache.level, cache.prestige, cache.gold, cache.gems, cache.scroll or "0", cache.serum or "0", fStr )
+    return string.format("🏆 Lv: %s 👑 P: %s 🛡️ Family: %s  💰 Gold: %s 💎 Gems: %s 🔑 Emperor Key: %s 📜 Memory Scroll: %s 💉 Serum: %s ⚡ TS: %s",
+        cache.level, cache.prestige, fStr, cache.gold, cache.gems, cache.ekey or "0", cache.scroll or "0", cache.serum or "0", cache.ts or "0")
 end
 local lastMsg = ""
 task.spawn(function()
@@ -360,7 +360,7 @@ task.spawn(function()
             if _G.Horst_SetDescription and msg ~= lastMsg then
                 lastMsg = msg
                 _G.Horst_SetDescription(msg)
-
+    
                         if tonumber(cache.level) == 225 then
                     _G.Horst_AccountChangeDone()
                 end
